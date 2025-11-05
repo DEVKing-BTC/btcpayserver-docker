@@ -3,4 +3,8 @@ services:
     name: btcpay
     env: docker
     plan: free
-    dockerCommand: docker-compose up
+    dockerContext: .
+    dockerfilePath: ./contrib/Dockerfile.render
+    envVars:
+      - key: BTCPAY_DOCKER_COMPOSE
+        value: "docker-compose.generated.yml"
