@@ -1,0 +1,3 @@
+FROM btcpayserver/btcpayserver:latest
+WORKDIR /app
+CMD ["bash", "-c", "docker-compose up"]
